@@ -4,6 +4,7 @@ import {sign} from 'jsonwebtoken';
 import authConfig from '../../../config/authConfig';
 import {compare} from 'bcrypt';
 import AppError from '../../../shared/errors/AppError';
+
 import IUsersRepository from '../repositories/IUsersRepository';
 
 interface IRequest{

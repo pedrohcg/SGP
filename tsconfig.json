@@ -8,6 +8,7 @@
       "strictPropertyInitialization": false,
       "baseUrl": "./src",
       "allowJs": true,
+      "typeRoots": ["@types", "node_modules/@types"],
       "paths": {
         "@modules/*": ["modules/*"],
         "@config/*": ["config/*"],
@@ -18,5 +19,8 @@
       "emitDecoratorMetadata": true,
       "skipLibCheck": true,
       "forceConsistentCasingInFileNames": true
-    }
+    },
+    "files": [
+      "src/@types/index.d.ts",
+    ]
   }
