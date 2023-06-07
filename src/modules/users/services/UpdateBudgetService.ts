@@ -17,7 +17,7 @@ class UpdateBudgetService{
         private usersRepository: IUsersRepository,
     ){}
 
-    public async execute({id, name, budget}: IRequest): Promise<any>{
+    public async execute({id, name, budget}: IRequest) {
         const user = await this.usersRepository.findById(id);
 
         if(user.orcamento === null){
@@ -26,12 +26,8 @@ class UpdateBudgetService{
             }
 
             const result = await this.usersRepository.createBudget(id, {owner: name, budget})
-
-            return result;
         } else {
             const result = await this.usersRepository.updateBudget(id, budget);
-
-            return result;
         }   
     }
 }

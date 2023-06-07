@@ -13,5 +13,6 @@ export default class BudgetController{
         await updateBudget.execute({id, name, budget});
 
         return response.json('Orcamento atualizado.')
+         
     }
 }
